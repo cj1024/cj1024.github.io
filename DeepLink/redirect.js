@@ -244,6 +244,9 @@ var ANDROID = "Android", IOS = "iOS", R = {
         window.location.replace(e)
     },
     openLinkWithIframe: function(e) {
+        window.location.replace(e)
+    },
+    openLinkWithIframe1: function(e) {
         var i = document.createElement("iframe");
         i.style.width = "1px", i.style.height = "1px", i.border = "none", i.src = e, document.body.appendChild(i)
     },
