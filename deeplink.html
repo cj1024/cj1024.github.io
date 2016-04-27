@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>You are being redirected to My First App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <script src="/redirect.js"></script>
+    <style type="text/css">
+      body {
+        font-family: 'HelveticaNeue-Light', 'Roboto', Helvetica, sans-serif;
+        padding: 0;
+        margin: 0;
+      }
+
+      .quirks {
+        background: #151e20;
+        color: white;
+      }
+
+      strong {
+        font-family: 'HelveticaNeue', 'Roboto', Helvetica, sans-serif;
+        font-weight: 600;
+      }
+
+      iframe {
+        display: none;
+      }
+
+      .app-icon-big {
+        width: 100px;
+        height: 100px;
+        border-radius: 16px;
+      }
+
+      .app-name {
+        font-size: 18px;
+        color: #ccd2d9;
+        letter-spacing: 0.04em;
+      }
+
+      .quirks-container {
+        margin: 100px auto 0;
+        width: 60%;
+        text-align: center;
+        background: #303840;
+        padding: 40px;
+        border-radius: 6px;
+      }
+
+      .btn {
+        background: black;
+        color: #ebebeb;
+        letter-spacing: 0.04em;
+        padding: 10px 25px;
+        font-size: 14px;
+        text-decoration: none;
+        border-radius: 6px;
+        box-shadow: 0 0 0 2px #404B56;
+        margin-top: 5px;
+        display: inline-block;
+      }
+
+      #js-show-on-quirks {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="quirks-container" id="js-show-on-quirks">
+      <img class="app-icon-big" alt="" src="/icon.png" />
+      <p class="app-name">My First App</p>
+      <a onclick="I();" class="btn" href="#">Go to app</a>
+    </div>
+
+
+    <script type="text/javascript">
+
+    var I = function() {
+      // DD.init if has the following signature:
+      // function(ip, device_type, os_version, language, deeplink, application_id)
+      DD.init(
+        '192.81.131.94',
+        'iPhone',
+        '8.4',
+        'zh-cn',
+        'bainuo://component?_hk_cid=572075b32ea624645b00d540&_hk_md=true&compid=movie&comppage=index',
+        '1102'
+      );
+
+      R.init(
+        'bainuo://component?_hk_cid=572075b32ea624645b00d540&_hk_md=true&compid=movie&comppage=index',
+        'https://m.nuomi.com',
+        '',
+        '50',
+        '100'
+      );
+    };
+
+      window.onload = function() {
+        (function() {
+          I();
+        })();
+      }
+
+
+    </script>
+  </body>
+</html>
