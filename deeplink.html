@@ -78,32 +78,9 @@
 
     <script type="text/javascript">
 
-    var I = function() {
-      // DD.init if has the following signature:
-      // function(ip, device_type, os_version, language, deeplink, application_id)
-      DD.init(
-        '192.81.131.94',
-        'iPhone',
-        '8.4',
-        'zh-cn',
-        'bainuo://categorylist?category=326',
-        '1102'
-      );
-
-      R.init(
-        'bainuo://categorylist?category=326',
-        'https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=HOKOLOKO13042015&mt=8',
-        '',
-        '50',
-        '100'
-      );
-    };
-
       window.onload = function() {
-        (function() {
-          window.history.back();
+          history.go(-1);
           window.location.replace('bainuo://categorylist?category=326');
-        })();
       }
 
 
