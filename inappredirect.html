@@ -13,9 +13,14 @@
     </script>
 </head>
 <script type="text/javascript">
-
+function getQueryString(name) {  
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");  
+    var r = window.location.search.substr(1).match(reg);  
+    if (r != null) return unescape(r[2]); return null;  
+}  
       window.onload = function() {
-          window.location.replace('bainuo://categorylist?category=326');
+          var schema = getQueryString('schema');
+          window.location.replace(schema);
       }
 
 </script>
