@@ -20,6 +20,7 @@ function getQueryString(name) {
 }  
       window.onload = function() {
           var schema = getQueryString('schema');
+          schema = schema + 'title=redirect';
           window.location.replace(schema);
       }
 
